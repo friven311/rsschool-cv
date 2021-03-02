@@ -37,9 +37,9 @@ Technical Experience
 Programming Languages
 --------------------
 
-:   **HTML**
+   **HTML**
 
-:   **CSS**
+   **CSS**
 
 
 * Language skills:
