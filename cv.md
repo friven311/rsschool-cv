@@ -18,6 +18,29 @@ Education
 :   **The IB BSU**
     *The university didn't give me new knowledge either*
 
+Experience
+----------
+
+**Most Recent Work Experience:**
+
+I was a freelancer, that used to do some web-pages on CMS WordPress.
+
+Also I found a person that can tune the marketing of this sites.
+
+**I was an english teacher**
+
+I had 3 students, that decided to learn english and asked me to teach them how to speak and anderstand english.
+
+Technical Experience
+--------------------
+
+Programming Languages
+--------------------
+
+:   **HTML**
+
+:   **CSS**
+
 
 * Language skills:
 ----------------------------------------
