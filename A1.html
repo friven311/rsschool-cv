@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <a href="index.html"><img src="asd.png"></a>
+   
+   <div class = lr>
+        <h2 style="color: black; font-size: 40px;">Лабораторные работы</h2>
+        <h3 style="color: black; font-size: 24px;">Factorial</h3>
+        <pre style="font-size: 16px;">
+<font color="black">%swi-prolog 7.6.4</font>
+fact(0,1).  <font color="black">%Граничное условие 0!=1</font>
+<font color="black">%Рекурсивное условие N!=N*(N-1)!</font>
+fact(N,F):- 
+           N1 is N-1,
+           fact(N1,F1),
+           F is N*F1.
+program :- fact(5,X), write(X).
+:- program.
+        </pre>
+        <pre style="font-size: 16px;">
+
+<font color="black">JsvaScript</font> 
+
+alert(fact(5));
+function fact(n) 
+  {
+     var reuslt;
+     <font color="black">//граничное условие 0!=1</font>
+     if(n == 0) return 1;
+
+     <font color="black">//рекурсивное условие n!=n*(n-1)!</font>
+     result=n*fact(n-1);
+     return result;
+  }
+</pre>
+<p style="font-size: 16px; font-color: blue;"><div id="js" name="a" OnClick="a();">Запустить JS</div></p>
+     <script>
+       function a()
+{
+            x = prompt("Введите натуральное число");
+            if (x >= 0)
+            {
+                alert(x + "! = " + fact(x));
+            }
+            else
+            {
+                alert("Invalid input!");
+            }
+            function fact(n)
+            {
+                if (n == 0) return 1;
+                var result;
+                result = n * fact(n - 1);
+                return result;
+            }
+}
+     </script>
+</body>
+</html>
