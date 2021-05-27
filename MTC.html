@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTC</title>
+    <link rel="shortcut icon" href="bn.png" type="image/x-icon">
+</head>
+<body style="background: #d4d4d4;">
+    <header>
+        
+    </header>
+    <h1 style="color: #1E90FF;">Mathematical Theory of Communication (MTC)</h1><br>
+    <div id="Shannon">
+        <h2 style="color: #0000FF;">Энтропия Шеннона</h2>
+        <h4 style="color: rgb(54, 128, 118);">Выполнение на JavaScript</h4>
+        <div style="background-color: #bdcfcf; margin-right: 1555px;">
+        <input type="number" id="t1" size="2" value="50" style="width: 40px;">
+        <input type="number" id="t2" size="2" value="25" style="width: 40px;">
+        <input type="number" id="t3" size="2" value="12.5" style="width: 40px;">
+        <input type="number" id="t4" size="2" value="12.5" style="width: 40px;">
+        <input type="number" id="t5" size="2" value="0" style="width: 40px;">
+        <input type="number" id="t6" size="2" value="0" style="width: 40px;">
+        <input type="button" id="buttn" onclick="Do()" value="H(X)=">
+        <span id="entropy"></span><br><br>
+        <script>
+            
+function Do() {
+    var entr = new Array(6);
+entr[0] = parseInt(document.getElementById("t1").value);
+entr[1] = parseInt(document.getElementById("t2").value);
+entr[2] = parseInt(document.getElementById("t3").value);
+entr[3] = parseInt(document.getElementById("t4").value);
+entr[4] = parseInt(document.getElementById("t5").value);
+entr[5] = parseInt(document.getElementById("t6").value);
+var n = 0;
+var s = 0;
+for (i = 0; i < 6; i++) {
+    s += entr[i];
+    if (entr[i] > 0)
+    {
+    n++;
+    } 
+}
+var x = 0;
+var px = new Array(n);
+var j = 0;
+
+for (i = 0; i < 6; i++) {
+    if (entr[i] > 0) px[j++] = entr[i] / s;
+
+}
+
+var entropy = 0;
+for (j = 0; j < n; j++) {
+    entropy += px[j] * Math.log2(1 / px[j]);
+}
+document.getElementById("entropy").innerHTML = entropy;       
+}
+
+        </script>
+        </div>
+    </div><br><br><br>
+
+    <div id="Approximation">
+
+        <h2 style="color: #0000FF;">Аппроксимация Шеннона</h2><br>
+        
+        <h4 style="color: rgb(54, 128, 118);">Выполнение на JavaScript</h4>
+
+        <div style="background-color: #bdcfcf; margin-right: 1435px;">
+        
+        <textarea name="usrtxt" id="" cols="40" rows="3" wrap="hard"> МАМА МЫЛА РА </textarea><br>
+        <input type="button" onclick="Go()" value="Выполнить" size="333">
+        <span id="demo"></span>
+        <script>
+            var arr = new Array();
+            function Find(X)
+            {
+                for(j=0; j<arr.length;j++)
+                {
+                    if (arr[j].letters==X)
+                {
+                    arr[j].cols=parseInt(arr[j].cols)+1;
+                    return;
+                }
+                }
+                var car = {letters:X, cols:"1"};
+                arr.push(car);
+                return;
+            }
+
+            function Go()
+            {
+                var str = document.getElementsByName("usrtxt")[0].value;
+                arr= new Array();
+                var ar = str.split("").filter((i) => i !== ' ');
+                for(i=0;i<ar.length-1;i++)
+                {
+                    Find(ar[i]);
+                }
+                for(j=0; j<arr.length; j++)
+                {
+                    document.getElementById("demo").innerHTML +=
+                    "<br><font color='#800000'>"+arr[j].letters+
+                    "</font>-<font color='#2E8B57'>" +
+                    arr[j].cols+"</font><br><br>";
+                }
+            }
+        </script>
+
+</div>
+    </div>
+    
+</body>
+</html>
